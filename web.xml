@@ -1,0 +1,12 @@
+//its a deployment descriptor of a java web application.its helps you to configure the servlets . it maps the url to the servlets and define the application settings.
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         version="5.0">
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>com.example.CartServlet</servlet-class>//this line helps you to do the servlet configurations.
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/cart</url-pattern>//url mapping.
+    </servlet-mapping>
+</web-app>
