@@ -1,0 +1,37 @@
+//project object model used in maven to manage the dependencies configure the project and build an package applications.
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<groupId>com.example</groupId>//
+<artifactId>jsp-shopping-cart</artifactId>//
+<version>1.0-SNAPSHOT</version>// are the basic project information.
+<packaging>war</packaging>
+<name>jsp-shopping-cart</name>
+<properties>
+    <maven.compiler.source>17</maven.compiler.source>//java source version 17
+    <maven.compiler.target>17</maven.compiler.target>//java target version 17
+</properties>
+<dependencies>
+<dependency>//used for httpservlet request and sessions.
+    <groupId>jakarta.servlet</groupId>
+    <artifactId>jakarta.servlet-api</artifactId>
+    <version>6.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>//used for jsp pages 
+    <groupId>jakarta.servlet.jsp</groupId>
+    <artifactId>jakarta.servlet.jsp-api</artifactId>
+    <version>3.1.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>//used for <c:foreach> <c:choose> <c:when>
+    <groupId>org.glassfish.web</groupId>
+    <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+    <version>2.0.0</version>
+</dependency>
+</dependencies>
+<build>
+    <finalName>jsp-shopping-cart</finalName>
+</build>
+</project>
